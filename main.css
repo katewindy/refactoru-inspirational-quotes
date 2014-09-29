@@ -1,0 +1,71 @@
+body {
+	background: #9FA99F;
+}
+
+/*styling for the line through section titles*/
+.titlestrike {
+	height: 1px;
+	background: #777F7F;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+/*styling for said section titles*/
+.title {
+	color: #777F7F;
+	font-size: 18px;
+	font-weight: normal;
+	background: #D3CCC6;
+	position: relative;
+	top: -0.65em;
+	left: 20px;
+	display: inline;
+	padding: 0px 10px;
+}
+
+
+.container {
+	width: 75%;
+	position: relative;
+	margin: auto;
+	padding: 20px;
+	background:#D3CCC6;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 7px;
+}
+
+.container textarea {
+	width: 100%;
+}
+
+.closebutton {
+	color: #FFF;
+	text-decoration: none;
+	font-size: .8em;
+	background: #ff9999;
+	padding: 8px 30px;
+	display: inline-block;
+	border-radius: 5px;
+
+}
+
+.buttoncontainer {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+#form {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	margin-top: 0px;
+}
+
+.authorText {
+	text-align: right;
+}
+
+.ratingcontainer {
+	text-align: center;
+}

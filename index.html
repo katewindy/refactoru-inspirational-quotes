@@ -2,12 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Untitled</title>
+  <title>Inspirational Quotes</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	
+	<div class="form">
+		<div class="container" id="form">
+			<h1>Add a new quote</h1><div class="buttoncontainer" id="saveQuote"><a class="closebutton" href="#">Save and Close</a></div>
+			<div class="titlestrike">
+				<h2 class="title">Quote</h2>
+			</div>
+			<textarea class="textEd" id="editname"></textarea>
+			<div class="titlestrike">
+				<h2 class="title">Author</h2>
+			</div>
+			<textarea class="textEd" id="editbio"></textarea>
+		</div>
+	</div>
+	<div class="container">
+		<h1>Inspirational Quotes</h1><div class="buttoncontainer" id="addQuote"><a class="closebutton" href="#">Edit Profile</a></div>
+		<div class="quoteholder">
+			<div class="quoteText">
+				"I come from Des Moines.  Somebody had to."
+			</div>
+			<div class="authorText">
+				- Bill Bryson
+			</div>
+			<div class="ratingcontainer">
+				<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+			</div>
+		</div>
+	</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="main.js"></script>
 
