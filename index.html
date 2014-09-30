@@ -5,37 +5,68 @@
   <title>Inspirational Quotes</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+  <link rel="stylesheet" type="text/css" href="lib/jquery.raty.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 	<div class="form">
 		<div class="container" id="form">
-			<h1>Add a new quote</h1><div class="buttoncontainer" id="saveQuote"><a class="closebutton" href="#">Save and Close</a></div>
+			<h1>Add a new quote</h1>
+			<div class="buttoncontainer" id="saveQuote">
+				<a class="closebutton quotebutton" href="#">Save and Close</a>
+			</div>
 			<div class="titlestrike">
 				<h2 class="title">Quote</h2>
 			</div>
-			<textarea class="textEd" id="editname"></textarea>
+			<textarea rows="5" class="textEd" id="enterquote" required></textarea>
 			<div class="titlestrike">
 				<h2 class="title">Author</h2>
 			</div>
-			<textarea class="textEd" id="editbio"></textarea>
+			<input class="authorEd" id="enterauthor" required></input>
 		</div>
 	</div>
-	<div class="container">
-		<h1>Inspirational Quotes</h1><div class="buttoncontainer" id="addQuote"><a class="closebutton" href="#">Edit Profile</a></div>
-		<div class="quoteholder">
-			<div class="quoteText">
-				"I come from Des Moines.  Somebody had to."
+
+		<div class="container">
+			<h1>Inspirational Quotes</h1><div class="buttoncontainer" id="addQuote"><a class="closebutton quotebutton" href="#">Add a Quote</a>
+		</div>
+		<div class="menu">
+			<div class="buttoncontainer buttonmenu" id="ratingsort">
+				<a class="closebutton" href="#">Sort by Rating</a>
 			</div>
-			<div class="authorText">
-				- Bill Bryson
+			<div class="buttoncontainer buttonmenu" id="authorsort">
+				<a class="closebutton" href="#">Sort by Author</a>
 			</div>
-			<div class="ratingcontainer">
-				<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+			<div class="buttoncontainer buttonmenu" id="newsort">
+				<a class="closebutton" href="#">Sort by New</a>
+			</div>
+			<div class="buttoncontainer buttonmenu" id="undoaction">
+				<a class="closebutton" href="#">Undo Last Delete</a>
+			</div>
+			<div class="buttoncontainer buttonmenu" id="random">
+				<a class="closebutton" href="#">Random Quote</a>
+			</div>
+		</div>
+		<div class="quotesgohere">
+			<div class="quoteholder">
+				<div class="quotedelete">
+					<a href="#" class="deletebutton"><i class="fa fa-times"></i></a>
+				</div>
+				<div class="quoteText">
+					I'm an example quote.  Go ahead and delete me, I don't mind!
+				</div>
+				<div class="authorText">
+					- The Person What Made This Thing
+				</div>
+				<div class="ratingcontainer">
+					<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+				</div>
 			</div>
 		</div>
 	</div>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="lib/sweet-alert.min.js"></script>
+	<script src="lib/jquery.raty.js"></script>
 	<script src="main.js"></script>
 
 </body>
