@@ -79,15 +79,21 @@ $(document).on('ready', function() {
 
   	// functionality for random quote button
   	$(document).on('click', '#random', function (){
-  		var randm = (0, quotecount);
-  		console.log
+  		var randm = randomizer(0, quotecount);
   		var bkg = createPopupBackground();
   		var cts = createPopupContents();
   		var randomid= '#'+randm;
   		var randomquote = $(randomid);
-  		console.log(randomquote);
+  		$(randomid).find('.deletebutton').hide();
   		applyPopup(bkg, cts);
   		$('.popupContent').append(randomquote);
+
+  		$(document).on('click', '#popupclose', function (){
+  			$(randomid).appendTo('.quotesgohere');
+  			$(randomid).find('.deletebutton').show();
+  			$('.popupContainer').remove();
+  			sortByRating();
+  		});
 
   	});
 
@@ -176,7 +182,14 @@ function authorFilter (clickedText) {
 function createPopupBackground () {
 	var popupContainer = $('<div>')
 		.addClass('popupContainer')
-		.css({ 'position':'fixed', 'top': '0px', 'left':'0px', 'background':'rgba(0,0,0,0.7)', 'width':'100%', 'height': '100%' });
+		.css({ 
+			'position':'fixed', 
+			'top': '0px', 
+			'left':'0px', 
+			'background':'rgba(0,0,0,0.7)', 
+			'width':'100%', 
+			'height': '100%', 
+			 });
 	return popupContainer;
 
 };
@@ -190,21 +203,27 @@ function createPopupContents (popupTitle, popupItems) {
 	    .addClass('popupContent')
 	    .css({
 	        'z-index': '2',
-	        'background': '#fff',
+	        'background': '#D3CCC6',
 	        'width': '50%',
 	        'padding': '20px',
 	        'border-radius': '10px',
 	        'position': 'absolute',
 	        'top': '50%',
 	        'left': '25%',
+	        'padding-top': '50px'
 	        
 	    });
 	var popupLinkHolder = $('<div>')
 	    .addClass('popupLinkHolder')
 	    .css('float', 'right');
-	var popupCloseLink = $('<a href="#">Close</a>')
+	var popupCloseLink = $('<a href="#" id="popupclose">Close</a>')
 	    .addClass('closeLink')
-	    .addClass('closebutton');
+	    .addClass('closebutton')
+	    .css({
+	    	'position':'absolute',
+	    	'top':'10px',
+	    	'right':'10px'
+	    });
 
 	popupContent.append(thisPopupTitle);
 	popupContent.append(thisPopupDivs);
@@ -227,24 +246,3 @@ function randomizer(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
